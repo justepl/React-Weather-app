@@ -17,8 +17,6 @@ class Search extends Component {
       newWeatherData
     } = this.props
 
-    console.log('->', this.props);
-
     return (
       <div className="Search">
         <form onSubmit={handleSubmit(newWeatherData)}>

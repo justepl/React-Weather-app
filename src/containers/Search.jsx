@@ -31,7 +31,7 @@ class Search extends Component {
             className="btn btn-primary"
             type="submit"
           >
-            Clear Values
+            Search
           </button>
         </form>
       </div>

@@ -13,6 +13,7 @@ const ErrorMessage = (props) => {
         className="close"
         data-dismiss="alert"
         aria-label="Close"
+        onClick={props.clearError}
       >
 
         <span aria-hidden="true">&times;</span>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
-import { newWeatherData } from '../reducers/weatherDataReducer'
+import { newWeatherData, clearError } from '../reducers/weatherDataReducer'
 import ErrorMessage from '../components/ErrorMessage'
 
 class Search extends Component {
@@ -14,12 +14,13 @@ class Search extends Component {
 
   renderError() {
     const {
-      apiError
+      apiError,
+      clearError,
     } = this.props;
 
     if (apiError) {
       return (
-        <ErrorMessage error={apiError} />
+        <ErrorMessage error={apiError} clearError={clearError}/>
       )
     }
   }
@@ -66,7 +67,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  ...bindActionCreators( { newWeatherData } ,dispatch)
+  ...bindActionCreators( { newWeatherData, clearError } ,dispatch)
 })
 
 

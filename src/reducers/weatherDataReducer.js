@@ -6,13 +6,14 @@ const API = {
 }
 
 const initialState = {
-  weatherData: null,
+  data: null,
   error: null,
 }
 
 const WEATHER_REQUEST = {
   SUCCESS: 'SUCCESS',
   ERROR: 'ERROR',
+  CLEAR: 'CLEAR',
 }
 
 export const newWeatherData = form => dispatch => {
@@ -31,6 +32,10 @@ export const newWeatherData = form => dispatch => {
   })
 }
 
+export const clearError = () => ({
+  type: WEATHER_REQUEST.CLEAR,
+})
+
 export default function weatherDataReducer(state = initialState, action) {
   switch (action.type) {
     case WEATHER_REQUEST.SUCCESS:
@@ -43,6 +48,12 @@ export default function weatherDataReducer(state = initialState, action) {
       return {
         ...state,
         error: action.payload,
+      }
+    
+    case WEATHER_REQUEST.CLEAR:
+      return {
+        ...state,
+        error: initialState.error,
       }
 
     default:

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
-import { newWeatherData, clearError } from '../../reducers/weatherDataReducer'
+import { newWeatherData } from '../../reducers/weatherDataReducer'
 
 class Search extends Component {
   render() {

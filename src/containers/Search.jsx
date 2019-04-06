@@ -3,6 +3,7 @@ import { reduxForm, Field } from 'redux-form'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import { newWeatherData } from '../reducers/weatherDataReducer'
+import ErrorMessage from '../components/ErrorMessage'
 
 class Search extends Component {
 
@@ -11,11 +12,24 @@ class Search extends Component {
     this.state = {}
   }
 
+  renderError() {
+    const {
+      apiError
+    } = this.props;
+
+    if (apiError) {
+      return (
+        <ErrorMessage error={apiError} />
+      )
+    }
+  }
+
   render() {
     const { 
       handleSubmit,
       newWeatherData
     } = this.props
+
 
     return (
       <div className="Search">
@@ -26,6 +40,8 @@ class Search extends Component {
             component="input"
             label="City"
           />
+
+          { this.renderError() }
 
           <button 
             className="btn btn-primary"
@@ -45,9 +61,13 @@ const formConfig = {
 
 const reduxFormComponent = reduxForm(formConfig)(Search);
 
+const mapStateToProps = (state) => ({
+  apiError: state.weatherDataReducer.error,
+})
+
 const mapDispatchToProps = (dispatch) => ({
   ...bindActionCreators( { newWeatherData } ,dispatch)
 })
 
 
-export default connect(null, mapDispatchToProps)(reduxFormComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(reduxFormComponent);

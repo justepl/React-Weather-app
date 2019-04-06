@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Search from './Search'
+import SearchSpace from './SearchSpace';
 
 export default class App extends Component {
   render() {
@@ -7,7 +7,7 @@ export default class App extends Component {
       <div className="App">
         <h1 className="display-4">Welcome to weather app</h1>
 
-        <Search />
+        <SearchSpace />
         
       </div>
     )

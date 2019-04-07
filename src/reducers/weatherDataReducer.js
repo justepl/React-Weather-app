@@ -6,7 +6,7 @@ const API = {
 }
 
 const initialState = {
-  data: null,
+  data: [],
   error: null,
 }
 
@@ -41,7 +41,7 @@ export default function weatherDataReducer(state = initialState, action) {
     case WEATHER_REQUEST.SUCCESS:
       return {
         ...state,
-        data: action.payload,
+        data: [...state.data, action.payload],
       }
 
     case WEATHER_REQUEST.ERROR:

@@ -15,6 +15,14 @@ h1 {
   padding: 14px 0px 0px 0px;
 }
 
+.weather-card-title {
+  margin: 10px 0px;
+}
+
+.weather-card-body {
+  padding-top: 0px;
+}
+
 .card-item-icon {
   max-width: 15px;
 }

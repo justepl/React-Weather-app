@@ -5,9 +5,8 @@ const CardHeader = (props) => {
   return (
     <Fragment>
       <img src={sunSvg} className="weather-card-img-top" alt="sun-logo" />
-      <h5 className="card-title">City - 15°</h5>
+      <h5 className="card-title weather-card-title">City - 15°</h5>
     </Fragment>
   )
 }
 export default CardHeader
-

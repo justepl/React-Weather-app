@@ -5,7 +5,7 @@ import locationSvg from '../assets/svg/location-arrow-solid.svg'
 
 const CardBody = (props) => {
   return (
-    <div className="card-body">
+    <div className="card-body weather-card-body">
       <ul className="list-group list-group-horizontal weather-list-group">
         <li className="list-group-item col">
           <img src={tempSvg} className="card-item-icon" alt="" /> Temp.

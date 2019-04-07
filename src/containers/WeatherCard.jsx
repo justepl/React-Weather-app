@@ -5,11 +5,9 @@ import CardBody from '../components/CardBody';
 export default class WeatherCard extends Component {
   render() { 
     return (
-      <div className="row">
-        <div className="card weather-card col-md-6">
-          <CardHeader />
-          <CardBody />
-        </div>
+      <div className="card weather-card col-md-6">
+        <CardHeader />
+        <CardBody />
       </div>
     );
   }

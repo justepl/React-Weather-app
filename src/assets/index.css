@@ -6,6 +6,23 @@ h1 {
   margin: 26px 0px;
 }
 
+.weather-card-img-top {
+  width: 5rem;
+  margin: auto;
+}
+
+.weather-card {
+  padding: 14px 0px 0px 0px;
+}
+
+.card-item-icon {
+  max-width: 15px;
+}
+
+.weather-list-group {
+  margin-bottom: 18px;
+}
+
 .w-50 {
   max-width: 400px;
   margin: auto;

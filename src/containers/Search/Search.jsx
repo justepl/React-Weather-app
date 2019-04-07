@@ -13,13 +13,19 @@ class Search extends Component {
 
     return (
       <div className="Search">
-        <form onSubmit={handleSubmit(newWeatherData)}>
+        <form 
+          className="form-group"
+          onSubmit={handleSubmit(newWeatherData)}
+        >
+          <h5 className="card-title">Entrez le nom d'une ville</h5>
           <Field
+            className="card-text form-control"
             name="city"
             type="text"
             component="input"
             label="City"
-          />
+            placeholder="Paris, Londres, New York, ..."
+          /><br />
 
           <button 
             className="btn btn-primary"

@@ -9,7 +9,12 @@ export default class WeatherCard extends Component {
     return (
       <div className="card weather-card col-md-6">
         <CardHeader city={card.name} temp={card.main.temp} />
-        <CardBody />
+        <CardBody
+          min={card.main.temp_min}
+          max={card.main.temp_max}
+          humidity={card.main.humidity}
+          wind={card.wind.speed}
+        />
       </div>
     );
   }

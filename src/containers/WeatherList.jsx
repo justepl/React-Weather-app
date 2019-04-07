@@ -10,7 +10,7 @@ class WeatherList extends Component {
     if (Array.isArray(weatherCards)) {
       return weatherCards.map((card, key) => {
         return (
-          <WeatherCard key={key} />
+          <WeatherCard key={key} card={card} />
         )
       })
     }

@@ -4,9 +4,11 @@ import CardBody from '../components/CardBody';
 
 export default class WeatherCard extends Component {
   render() { 
+    const { card } = this.props
+
     return (
       <div className="card weather-card col-md-6">
-        <CardHeader />
+        <CardHeader city={card.name} temp={card.main.temp} />
         <CardBody />
       </div>
     );

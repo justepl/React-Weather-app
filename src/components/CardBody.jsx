@@ -2,6 +2,7 @@ import React from 'react';
 import tempSvg from '../assets/svg/thermometer-three-quarters-solid.svg'
 import tintSvg from '../assets/svg/tint-solid.svg'
 import locationSvg from '../assets/svg/location-arrow-solid.svg'
+import convert from '../helpers/convert'
 
 const CardBody = (props) => {
   const { min, max, humidity, wind } = props
@@ -10,8 +11,8 @@ const CardBody = (props) => {
       <ul className="list-group list-group-horizontal weather-list-group">
         <li className="list-group-item col">
           <img src={tempSvg} className="card-item-icon" alt="" /> Temp.
-          <div>{ min }°</div>
-          <div>{ max }°</div>
+          <div>{ convert(min) }°</div>
+          <div>{ convert(max) }°</div>
         </li>
         <li className="list-group-item col">
           <img src={tintSvg} className="card-item-icon" alt="" /> Humidity

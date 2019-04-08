@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const API = {
-  END_POINT: "http://api.openweathermap.org/data/2.5/weather?q=",
+  END_POINT: "https://api.openweathermap.org/data/2.5/weather?q=",
   KEY: "&appid=ee356788128cce43945d9f061582f588",
 }
 

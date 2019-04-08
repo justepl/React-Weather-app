@@ -7,7 +7,7 @@ class WeatherList extends Component {
   
   renderCard(){
     const { weatherCards } = this.props
-    if (Array.isArray(weatherCards)) {
+    if (Array.isArray(weatherCards) && weatherCards[0]) {
       return weatherCards.reverse().map((card, key) => {
         return (
           <WeatherCard key={key} card={card} />
